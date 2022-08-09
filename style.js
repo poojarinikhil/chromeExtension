@@ -1,15 +1,23 @@
 // function buttonclick(){
 //     console.log('button click')
 // }
-let inputbtn = document.getElementById("input-btn")
 let myLeads = []
+let inputbtn = document.getElementById("input-btn")
 const inputEl = document.getElementById("input-el") 
 const ulEl = document.getElementById("unorderLi")
-inputbtn.addEventListener("click", myfunction);
+inputbtn.addEventListener("click", myfunction)
 function myfunction(){
     //document.getElementById("input-btn").style.backgroundColor = 'cyan';
     myLeads.push(inputEl.value);
+    document.getElementById("input-el").value="";
+    render()
+    
+}
+function render(){
+    let listItem = ""
+    // ulEl.innerHTML+= "<li>"+inputEl.value+"</li>";
     for(let i = 0; i <myLeads.length; i++){
-        ulEl.innerHTML+= "<li>"+myLeads[i]+"</li>";
+        listItem += "<li>"+myLeads[i]+"</li>";
     }
+    ulEl.innerHTML = listItem
 }
