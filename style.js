@@ -4,10 +4,12 @@
 let inputbtn = document.getElementById("input-btn")
 let myLeads = []
 const inputEl = document.getElementById("input-el") 
+const ulEl = document.getElementById("unorderLi")
 inputbtn.addEventListener("click", myfunction);
 function myfunction(){
-    alert("button has been clicked using event listener")
-    document.getElementById("input-btn").style.backgroundColor = 'cyan';
-    myLeads.push("www.awesomlead.com")
-    console.log(myLeads);
+    //document.getElementById("input-btn").style.backgroundColor = 'cyan';
+    myLeads.push(inputEl.value);
+    for(let i = 0; i <myLeads.length; i++){
+        ulEl.innerHTML+= "<li>"+myLeads[i]+"</li>";
+    }
 }
