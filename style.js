@@ -17,7 +17,13 @@ function render(){
     let listItem = ""
     // ulEl.innerHTML+= "<li>"+inputEl.value+"</li>";
     for(let i = 0; i <myLeads.length; i++){
-        listItem += "<li>"+myLeads[i]+"</li>";
+        //listItem += "<li><a target='_blank' href='#'>"+myLeads[i]+"</a></li>"
+        listItem += `
+        <li>
+            <a target='_blank' href='#'>
+                ${myLeads[i]}
+            </a>
+        </li>`
     }
     ulEl.innerHTML = listItem
 }
