@@ -5,6 +5,8 @@ let myLeads = []
 let inputbtn = document.getElementById("input-btn")
 const inputEl = document.getElementById("input-el") 
 const ulEl = document.getElementById("unorderLi")
+// localStorage.clear()
+// console.log(localStorage.getItem(myLeads))
 inputbtn.addEventListener("click", myfunction)
 function myfunction(){
     //document.getElementById("input-btn").style.backgroundColor = 'cyan';
