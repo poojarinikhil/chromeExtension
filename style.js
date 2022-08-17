@@ -13,6 +13,10 @@ const inputEl = document.getElementById("input-el")
 const ulEl = document.getElementById("unorderLi")
 // localStorage.clear()
 let leadsFromLocalStorage=JSON.parse(localStorage.getItem("myLeads"))
+if(leadsFromLocalStorage){
+    myLeads=leadsFromLocalStorage
+    render()
+}
 inputbtn.addEventListener("click", myfunction)
 function myfunction(){
     //document.getElementById("input-btn").style.backgroundColor = 'cyan';
