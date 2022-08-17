@@ -11,8 +11,9 @@ console.log(localStorage.getItem("myLeads"))
 let inputbtn = document.getElementById("input-btn")
 const inputEl = document.getElementById("input-el") 
 const ulEl = document.getElementById("unorderLi")
+const deleteBtn = document.getElementById("delete-btn")
 // localStorage.clear()
-let leadsFromLocalStorage=JSON.parse(localStorage.getItem("myLeads"))
+const leadsFromLocalStorage=JSON.parse(localStorage.getItem("myLeads"))
 if(leadsFromLocalStorage){
     myLeads=leadsFromLocalStorage
     render()
@@ -26,6 +27,15 @@ function myfunction(){
     // console.log(localStorage.getItem("myLeads"))
     render()
     
+}
+deleteBtn.addEventListener("dblclick", deleto)
+function deleto(){
+    for (var i = 0; i < myLeads.length; i){
+        myLeads.pop();
+    }
+    console.log("Double clicked")
+    localStorage.clear()
+    render()
 }
 function render(){
     let listItem = ""
