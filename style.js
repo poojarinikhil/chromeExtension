@@ -36,7 +36,7 @@ const tabs = [
 tabBtn.addEventListener("click",saveTab)
 
 function saveTab(){
-    console.log(tabs)
+    console.log(tabs[0].url)
 }
 deleteBtn.addEventListener("dblclick", deleto)
 function deleto(){
