@@ -36,7 +36,10 @@ const tabs = [
 tabBtn.addEventListener("click",saveTab)
 
 function saveTab(){
-    console.log(tabs[0].url)
+    
+    myLeads.push(tabs[0].url);
+    localStorage.setItem("myLeads", JSON.stringify(myLeads));
+    render()
 }
 deleteBtn.addEventListener("dblclick", deleto)
 function deleto(){
