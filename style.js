@@ -30,9 +30,7 @@ function myfunction(){
 }
 deleteBtn.addEventListener("dblclick", deleto)
 function deleto(){
-    for (var i = 0; i < myLeads.length; i){
-        myLeads.pop();
-    }
+    myLeads = []
     console.log("Double clicked")
     localStorage.clear()
     render()
