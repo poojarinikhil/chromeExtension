@@ -12,6 +12,7 @@ let inputbtn = document.getElementById("input-btn")
 const inputEl = document.getElementById("input-el") 
 const ulEl = document.getElementById("unorderLi")
 const deleteBtn = document.getElementById("delete-btn")
+const tabBtn = document.getElementById("tab-btn")
 // localStorage.clear()
 const leadsFromLocalStorage=JSON.parse(localStorage.getItem("myLeads"))
 if(leadsFromLocalStorage){
@@ -26,7 +27,16 @@ function myfunction(){
     localStorage.setItem("myLeads",JSON.stringify(myLeads));
     // console.log(localStorage.getItem("myLeads"))
     render()
-    
+}
+
+const tabs = [
+    {url: "https://www.linkedin.com/in/nikhil-poojari-b89103225/"}
+]
+
+tabBtn.addEventListener("click",saveTab)
+
+function saveTab(){
+    console.log(tabs)
 }
 deleteBtn.addEventListener("dblclick", deleto)
 function deleto(){
