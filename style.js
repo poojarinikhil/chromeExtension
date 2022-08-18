@@ -29,17 +29,14 @@ function myfunction(){
     render()
 }
 
-const tabs = [
-    {url: "https://www.linkedin.com/in/nikhil-poojari-b89103225/"}
-]
-
 tabBtn.addEventListener("click",saveTab)
 
 function saveTab(){
-    
-    myLeads.push(tabs[0].url);
-    localStorage.setItem("myLeads", JSON.stringify(myLeads));
-    render()
+    chrome.tabs.query({active: true, currentWindow: true},function(tabs){
+        myLeads.push(tabs[0].url);
+        localStorage.setItem("myLeads", JSON.stringify(myLeads));
+        render()
+    })
 }
 deleteBtn.addEventListener("dblclick", deleto)
 function deleto(){
