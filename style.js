@@ -23,7 +23,7 @@ inputbtn.addEventListener("click", myfunction)
 function myfunction(){
     //document.getElementById("input-btn").style.backgroundColor = 'cyan';
     myLeads.push(inputEl.value);
-    document.getElementById("input-el").value=""
+    document.getElementById("input-el").value=" "
     localStorage.setItem("myLeads",JSON.stringify(myLeads))
     // console.log(localStorage.getItem("myLeads"))
     render()
